@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-focus {
+    background-color: #303030;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-focus-image {
+    background-color: lightgray;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 20%;
+}
+
+.card-content-focus {
+    text-align: center;
+    color: white;
+    padding: 50px 10px;
+}
