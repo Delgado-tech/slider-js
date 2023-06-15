@@ -5,17 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/slider.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/inputs.css">
     <script src="./scripts/slider.js"></script>
     <title>SliderJS</title>
 </head>
 <body>
     <main>
+        <!------------------------NAV------------------------------------->
         <nav>
+            <button id="run-btn">Run ></button>
+            <details open>
+                <summary>Slider</summary>
+                <div class="input-container">
+                    <label for="input-container-size">Tamanho da área do slider</label>
+                    <input id="input-slider-width" type="text" spellcheck="false" placeholder="width: 100%" data-input-prefix="width: " data-input-regex="[^0-9]" data-input-suffix="%">
+                    <input id="input-slider-height" type="text" spellcheck="false" placeholder="height: 500px" data-input-prefix="height: " data-input-regex="[^0-9]" data-input-suffix="px">
+                </div>
+                <div class="input-container">
+                    <label for="input-slider-endless">
+                        <p>Modo Carrossel <span class="info" title="Se verdadeiro, fara com que o slider não tenha fim">*</span></p>
+                        <div class="input-checkbox">
+                            <span>false</span>
+                            <span class="input-checkbox-checked">true</span>
+                        </div>
+                    </label>
+                    <input id="input-slider-endless" type="checkbox" checked hidden>
+                </div>
+                <div class="input-container">
+                    <label for="input-slider-auto-flow">
+                        <p>Rolagem Automática <span class="info" title="Faz com que o slider role automáticamente a cada x(delay) milesegundos, caso o usuário interaja com o slider, a rolagem automática retornará após x(inatividade) milesegundos; &#013;&#013;Obs: Não funciona sem o modo carrossel ativo!">*</span></p>
+                        <div class="input-checkbox">
+                            <span class="input-checkbox-checked">false</span>
+                            <span>true</span>
+                        </div>
+                    </label>
+                    <input id="input-slider-auto-flow" type="checkbox" hidden>
+                    <input id="input-slider-auto-flow-delay" type="text" spellcheck="false" placeholder="delay: 2000ms" data-input-prefix="delay: " data-input-regex="[^0-9]" data-input-suffix="ms">
+                    <input id="input-slider-auto-flow-inact-delay" type="text" spellcheck="false" placeholder="inatividade: 10000ms" data-input-prefix="inatividade: " data-input-regex="[^0-9]" data-input-suffix="ms">
+                
+                </div>
+            </details>
+            <details open>
+                <summary>Card</summary>
+                <div class="input-container">
+                    <label for="input-container-size">Tamanho do cartão</label>
+                    <input id="input-slider-card-width" type="text" spellcheck="false" placeholder="width: 400px" data-input-prefix="width: " data-input-regex="[^0-9]" data-input-suffix="px">
+                </div>
+                <div class="input-container">
+                    <label for="input-slider-card-auto-disposition">
+                        <p>Disposição automática <span class="info" title="Se verdadeiro, fara com que os cartões se ajustem para não ficarem vazando">*</span></p>
+                        <div class="input-checkbox">
+                            <span>false</span>
+                            <span class="input-checkbox-checked">true</span>
+                        </div>
+                    </label>
+                    <input id="input-slider-card-auto-disposition" type="checkbox" checked hidden>
+                </div>
+            </details>
+        </details>
+        <details open>
+            <summary>Extras</summary>
             <div class="input-container">
-                <label for="input-container-size">Tamanho da área do slider</label>
-                <input id="input-container-size" type="text">
+                <label for="input-slider-ref">
+                    <p>Tela de destaque <span class="info" title="Você pode conseguir os valores do cartão em destaque do slider (como a imagem e o texto) e mostra-los em outro lugar, como pode ver no painel acima do slider. &#013;&#013;Obs: Não funciona sem o modo carrossel ativo!">*</span></p>
+                    <div class="input-checkbox">
+                        <span>false</span>
+                        <span class="input-checkbox-checked">true</span>
+                    </div>
+                </label>
+                <input id="input-slider-ref" type="checkbox" checked hidden>
             </div>
+            <div class="input-container">
+                <label for="input-indicator-ref">
+                    <p>Indicador do slider <span class="info" title="Mostra a posição do cartão atual.&#013;&#013;Obs: Não funciona sem o modo carrossel ativo!">*</span></p>
+                    <div class="input-checkbox">
+                        <span>false</span>
+                        <span class="input-checkbox-checked">true</span>
+                    </div>
+                </label>
+                <input id="input-indicator-ref" type="checkbox" checked hidden>
+                <span class="input-comment">O ícone do indicador é 100% customizavel, basta acessar suas classes do css e editá-las!</span>
+            </div>
+        </details>
         </nav>
+        <!------------------------SLIDER------------------------------------->
         <article id="show-region">
             <section class="slider-ref card-focus" data-slider-ref="slider-people">
                 <div class="slider-image-ref card-focus-image" data-slider-item-ref=".card-image"></div>  
@@ -36,7 +109,7 @@
                 </div>
             </section>
 
-            <section id="slider-people" class="slider-container" data-slider-scroll-start="15" data-slider-image-src="./assets/slider-images/photo-{id}.svg" data-slider-endless="true" data-slider-size="90% auto" data-slider-card-width="400px" data-auto-card-disposition="true" data-slider-auto-flow="false 2000 10000">
+            <section id="slider-people" class="slider-container" data-slider-scroll-start="10" data-slider-image-src="./assets/slider-images/photo-{id}.svg" data-slider-endless="true" data-slider-size="90% auto" data-slider-card-width="400px" data-auto-card-disposition="true" data-slider-auto-flow="false 2000 10000" data-refs-indicator="true" data-refs-slider="true">
                 <div class="slider">
                     <div class="card-wrapper hidden-image">
                         <div class="card-image">

@@ -1,0 +1,82 @@
+#run-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 100px;
+    padding: 5px 10px;
+    border: 0;
+    background-color: #303030;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+#run-btn:hover {
+    transform: scale(105%);
+    background-color:rgb(121, 121, 121);
+}
+
+.input-container {
+    display: grid;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.input-container .info{
+    cursor: help;
+    font-size: 1.2rem;
+    color: red;
+}
+
+.input-container .input-comment {
+    color: rgb(121, 121, 121);
+    font-weight: 400;
+    font-size: 0.8rem;
+    display: flex;
+}
+
+.input-container input {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 5px 4%;
+    width: 92%;
+    outline: none;
+    margin-bottom: 5px;
+}
+
+.input-container input::placeholder {
+    font-weight: 400;
+}
+
+.input-container .input-checkbox {
+    display: grid;
+    grid-template-columns: 50% auto;
+    user-select: none;
+    margin-bottom: 5px;
+}
+
+.input-container .input-checkbox span {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 5px 8%;
+}
+
+.input-container .input-checkbox span.input-checkbox-checked {
+    background-color: #303030;
+    color: white;
+}
+
+.input-container .input-checkbox span:first-child {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.input-container .input-checkbox span:last-child {
+    border-radius: 0px 10px 10px 0px;
+}

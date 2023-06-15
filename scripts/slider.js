@@ -10,6 +10,8 @@ class slider {
     sliderAutoFlowTimemOut = undefined;
     sliderAutoFlowCalledBtnClick = false;
 
+    startCardsOrder = undefined;
+
     constructor(sliderContainer) {
         this.container = sliderContainer;
         this.scrollStartPos = this.getScrollStartAdjust();
@@ -19,6 +21,7 @@ class slider {
         this.cardStartArea = this.getCardArea();
         this.loadCardImages();
         this.setCardIndexes();
+        this.startCardsOrder = this.getCards();
 
         // ====> Indicator config
         this.indicatorRef = this.getIndicatorRef();
@@ -53,6 +56,22 @@ class slider {
         this.setDisabledActionButtons({auto: true}); // set disabled buttons
     }
 
+    resetScroll() {
+        const slider = this.getSliderElement();
+
+        for(let i = slider.childNodes.length; i > 0; i--){
+            slider.childNodes[i - 1].remove();
+        }
+
+        this.startCardsOrder.forEach(card => {
+            slider.appendChild(card);
+        });
+        
+        this.scrollLastPos = this.scrollStartPos;
+        this.setIndicatorRef();
+        this.setSliderRefs();
+    }
+
     // ================== Booleans ================================================================
 
     isEndless() {
@@ -65,6 +84,16 @@ class slider {
 
     isAutoCardDisposition() {
         return Boolean(this.container.getAttribute("data-auto-card-disposition") == "true");
+    }
+
+    isIndicatorRefAllowed() {
+        const allowed = this.container.getAttribute("data-refs-indicator");
+        return Boolean( (allowed == undefined ? "true" : allowed) == "true");
+    }
+
+    isSliderRefAllowed() {
+        const allowed = this.container.getAttribute("data-refs-slider");
+        return Boolean( (allowed == undefined ? "true" : allowed) == "true");
     }
 
 
@@ -219,12 +248,13 @@ class slider {
         if(!this.isEndless()) return;
 
         const slider = this;
+        clearInterval(slider.sliderAutoFlowInterval);
 
         this.sliderAutoFlowInterval = setInterval(function() {
             if(slider.hasFocus) return;
 
             if(!slider.isSliderAutoFlow() || !slider.isEndless()) {
-                clearInterval(sliderAutoFlow);
+                clearInterval(slider.sliderAutoFlowInterval);
                 return;
             }
 
@@ -252,7 +282,7 @@ class slider {
     // ====> Indicator Ref Setter
 
     setIndicatorRef(adjust = 0) {
-        if(!this.isEndless()) {
+        if(!this.isEndless() ||  !this.isIndicatorRefAllowed()) {
             this.indicatorRef.style.setProperty("display", "none");
             return;
         }
@@ -287,6 +317,7 @@ class slider {
 
     setSliderRefs(adjust = 0) {
         if(!this.isEndless()) return;
+        if(!this.isSliderRefAllowed()) return;
         if(this.sliderRefs.length == 0) return;
 
         this.sliderRefs.forEach(ref => {
@@ -307,15 +338,17 @@ class slider {
     // ====> Window Events
 
     setNewCardDisposition() {
-        if (!this.isAutoCardDisposition()) return;
-
         const currentCardIndex = this.getCurrentRelativeCardIndex();
         this.getCards().forEach(card => {
-            const cardsVisibles = Math.floor(this.container.clientWidth/this.cardStartArea);
-            if(cardsVisibles > 0){
-                card.style.setProperty("min-width", `${(this.container.clientWidth/ cardsVisibles) - this.getCardMargins()}px`, "important");
+            if (!this.isAutoCardDisposition()) {
+                card.style.setProperty("min-width", this.cardStartArea, "important");
             }else{
-                card.style.setProperty("min-width", "100%", "important");
+                const cardsVisibles = Math.floor(this.container.clientWidth/this.cardStartArea);
+                if(cardsVisibles > 0){
+                    card.style.setProperty("min-width", `${(this.container.clientWidth/ cardsVisibles) - this.getCardMargins()}px`, "important");
+                }else{
+                    card.style.setProperty("min-width", "100%", "important");
+                }
             }
 
         });
@@ -524,7 +557,7 @@ class slider {
     }
 
     moveCardsToRight(mouseElement = null){
-        if(this.getSliderElement().scrollLeft >= this.getScrollArea() || !this.hasFocus) {
+        if(this.getSliderElement().scrollLeft >= this.getScrollArea() - this.scrollStartPos || !this.hasFocus) {
             const cards = this.getCards();
             const firstCard = cards[0].cloneNode(true);
             
@@ -544,5 +577,16 @@ class slider {
         cardImages.forEach((cardImage, index) => {
             cardImage.style.setProperty("background-image", `url(${this.container.getAttribute("data-slider-image-src").replace("{id}", index)})`, "important");
         });
+    }
+
+    reloadConfigs() {
+        this.resetScroll();
+        this.setContainerSize();
+        this.setCardWitdh();
+        this.cardStartArea = this.getCardArea();
+        this.sliderRefs = this.getSliderRefs();
+        this.setNewCardDisposition();
+        this.setSliderAutoFlow();
+        this.setDisabledActionButtons({auto: true});
     }
 }

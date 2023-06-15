@@ -147,7 +147,6 @@
 .indicator-selected {
     background-color: #303030;
     transform: scale(130%);
-    animation: scaleUp 0.7s ease-in-out;
 }
 
 .indicator-around-selected {
@@ -157,13 +156,4 @@
 .indicator-previous {
     background-color: #7a7a7a;
     border: 0;
-}
-
-@keyframes scaleUp {
-    0% {
-        transform: scale(100%);
-    }
-    100% {
-        transform: scale(130%);
-    }
 }
