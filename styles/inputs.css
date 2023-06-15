@@ -6,7 +6,7 @@
     padding: 5px 10px;
     border: 0;
     background-color: #303030;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 700;
     color: white;
     border-radius: 20px;
@@ -21,14 +21,14 @@
 
 .input-container {
     display: grid;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     padding: 10px;
 }
 
 .input-container .info{
     cursor: help;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: red;
 }
 
@@ -43,7 +43,7 @@
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: 600;
     padding: 5px 4%;
     width: 92%;
