@@ -1,0 +1,38 @@
+#social-media {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+#media-wrapper{
+    background-color: white;
+    padding: 30px 8px 10px 8px;
+    display: grid;
+    row-gap: 10px;
+    border-radius: 0px 0px 0px 20px;
+}
+
+#media-linkedin {
+    background-image: url(../assets/social-media/linkedin.svg);
+}
+
+#media-github {
+    background-image: url(../assets/social-media/github.svg);
+}
+
+.media {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0;
+    cursor: pointer;
+    height: 50px;
+    transition: all .2s ease-in;
+    width: 50px;
+}
+
+.media:hover {
+    transform: scale(105%);
+    filter: brightness(130%);
+}
