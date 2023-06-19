@@ -198,15 +198,20 @@ sliderContainers.forEach(sliderContainer => {
         <tr>
             <td align="center"><pre>data-refs-indicator</pre></td>
             <td align="center"><code>data-refs-indicator="true"</code></td>
-            <td align="center">Ativa ou desativa o indicador do slider atual</td>
+            <td align="center">Ativa ou desativa o indicator ref (veja a imagem de referência)</td>
         </tr>
         <!-- Linha 11 -->
         <tr>
             <td align="center"><pre>data-refs-slider</pre></td>
             <td align="center"><code>data-refs-slider="true"</code></td>
-            <td align="center">Ativa ou desativa os paineis de foco do cartão atual</td>
+            <td align="center">Ativa ou desativa os slider refs (veja a imagem de referência)</td>
         </tr>
     </tbody>
 </table>
+
+<br>
+<h3>Imagem de referência:</h3>
+<img src="https://github.com/Delgado-tech/slider-js/assets/60985347/909381c6-3c07-4d20-a552-07559e921432">
+
 
 
