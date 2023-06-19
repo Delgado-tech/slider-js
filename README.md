@@ -71,6 +71,29 @@
             <p class="card-description">Descrição</p>
         </div>
     </div>
+    <!-- [...] -->
+```
+
+<br>
+<blockquote> Você pode esconder informações do cartão colocando ao lado da classe card-wrapper as classes <code>hidden-image"</code> para imagens e <code>hidden-content</code> para o conteúdo</blockquote>
+
+```html
+    <div class="card-wrapper hidden-image">
+        <!-- [...] -->
+    </div>
+    
+    <div class="card-wrapper hidden-content">
+        <!-- [...] -->
+    </div>
+```
+
+<br>
+<blockquote> Você pode também mudar a orientação do itens, ao invés de ficar a imagem acima ou abaixo do texto, ela pode ficar ao lado do texto, para isso basta colocar ao lado da classe card-wrapper a classe <code>card-wrapper-grid-column</code> para o conteúdo</blockquote>
+
+```html
+    <div class="card-wrapper card-wrapper-grid-column">
+        <!-- [...] -->
+    </div>
 ```
 
 <br>
@@ -113,29 +136,57 @@ sliderContainers.forEach(sliderContainer => {
     <tbody>
         <!-- Linha 1 -->
         <tr>
-            <td>data-slider-image-src</td>
-            <td><pre><span class="pl-c1">data-slider-image-src</span>="./assets/slider-images/photo-{id}.svg"</pre></td>
-            <td>Define o caminho onde serão encontradas as imagens de cada card</td>
+            <td align="center"><pre>data-slider-image-src</pre></td>
+            <td align="center"><code>data-slider-image-src="./assets/slider-images/photo-{id}.svg"</code></td>
+            <td align="center">Define o caminho onde serão encontradas as imagens de cada card (obs: as imagens devem estar no mesmo diretório, possuindo o mesmo nome seguido do número do card e onde conterá esse número escreva "{id}" na data-tag como no exemplo)</td>
         </tr>
         <!-- Linha 2 -->
         <tr>
-            <td>data-slider-width</td>
-            <td>Define a largura do container do slider</td>
+            <td align="center"><pre>data-slider-width</pre></td>
+            <td align="center"><code>data-slider-width="80%"</code></td>
+            <td align="center">Define a largura do container do slider</td>
         </tr>
         <!-- Linha 3 -->
         <tr>
-            <td>data-slider-height</td>
-            <td>Define a altura do container do slider</td>
+            <td align="center"><pre>data-slider-height</pre></td>
+            <td align="center"><code>data-slider-height="auto"</code></td>
+            <td align="center">Define a altura do container do slider</td>
         </tr>
-         <!-- Linha 4 -->
+        <!-- Linha 4 -->
         <tr>
-            <td>data-slider-size</td>
-            <td>Define a largura e a altura do container do slider simultaneamente</td>
+            <td align="center"><pre>data-slider-size</pre></td>
+            <td align="center"><code>data-slider-size="80% auto"</code></td>
+            <td align="center">Define a largura e a altura do container do slider simultaneamente</td>
         </tr>
-         <!-- Linha 5 -->
+        <!-- Linha 5 -->
         <tr>
-            <td>data-slider-size</td>
-            <td>Define a largura e a altura do container do slider simultaneamente</td>
+            <td align="center"><pre>data-slider-card-width</pre></td>
+            <td align="center"><code>data-slider-card-width="400px"</code></td>
+            <td align="center">Define a largura dos cards (obs: a altura é com base na altura do container do slider)</td>
+        </tr>
+        <!-- Linha 6 -->
+        <tr>
+            <td align="center"><pre>data-slider-scroll-start</pre></td>
+            <td align="center"><code>data-slider-scroll-start="10 10"</code></td>
+            <td align="center">Define um scroll inicial para o slider, o primeiro valor irá afetar todo o scroll, já o segundo só irá afetar o scroll ao a página ser carregada</td>
+        </tr>
+        <!-- Linha 7 -->
+        <tr>
+            <td align="center"><pre>data-slider-endless</pre></td>
+            <td align="center"><code>data-slider-endless="true"</code></td>
+            <td align="center">Ativa ou desativa o modo carrossel (obs: algumas funcionalidades não funcionam sem esse modo ativo)</td>
+        </tr>
+        <!-- Linha 8 -->
+        <tr>
+            <td align="center"><pre>data-auto-card-disposition</pre></td>
+            <td align="center"><code>data-auto-card-disposition="true"</code></td>
+            <td align="center">Ativa ou desativa o ajuste automático do tamanho dos cards para não sobrarem na tela</td>
+        </tr>
+        <!-- Linha 9 -->
+        <tr>
+            <td align="center"><pre></pre></td>
+            <td align="center"><code></code></td>
+            <td align="center"></td>
         </tr>
     </tbody>
 </table>
