@@ -35,21 +35,28 @@
 
 
 ```html
-  <!DOCTYPE html>
-  <html lang="pt-br">
+  <html>
   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- Imports -->
       <link rel="stylesheet" href="./slider.css">
       <script src="./slider.js"></script>
       <!------------->
-      <title>Slider template</title>
   </head>
   <body>
   </body>
   </html>
 ```
+<br>
+<p>Terceiro passo, crie uma section com a classe <code>slider-container</code> (caso a sua página venha a possuir mais de um slider crie um id para identifica-lo) onde será configurado a maior parte do funcionamento do slider, dentro dela crie uma div com a classe <code>slider</code> e outras duas divs com a classe <code>slider-btn</code> (essas duas divs servirão como botões para navegar dentro no slider) e coloque em uma a classe <code>slider-btn-left</code> e em outra a classe <code>slider-btn-right</code> para posicionar os botões.</p>
 
+```html
+    <section id="slider-something" class="slider-container">
+        <div class="slider">
+        </div>
+        <!-- Buttons -->
+        <div class="slider-btn slider-btn-left"><button>&lt;</button></div> <!-- &lt; é o código do simbolo menor que ("<") -->
+        <div class="slider-btn slider-btn-right"><button>&gt;</button></div> <!-- &lt; é o código do simbolo maior que (">") -->
+    </section>
+```
 
 
