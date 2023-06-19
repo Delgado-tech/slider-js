@@ -111,6 +111,15 @@
     text-align: center;
 }
 
+/*================================ Slider ref ===========================================================*/
+
+/*optional*/
+.slider-image-ref {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 /*================================ Indicator ===========================================================*/
 
 .slider-indicator {
