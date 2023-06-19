@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Imports -->
+    <link rel="stylesheet" href="./slider.css">
+    <script src="./slider.js"></script>
+    <!------------->
+    <title>Slider template</title>
+</head>
+<body>
+
+    <!-- Card Focus -->
+    <section class="slider-ref card-focus" data-slider-ref="slider-something">
+        <div class="slider-image-ref card-focus-image" data-slider-item-ref=".card-image"></div>  
+        <article class="card-content-focus">
+            <h2><span class="slider-content-ref" data-slider-item-ref=".card-title"></span></h2> 
+            <p><span class="slider-content-ref" data-slider-item-ref=".card-description"></span></p> 
+        </article>
+    </section>
+
+    <!-- Slider Indicator -->
+    <section class="slider-indicator" data-slider-ref="slider-something">
+        <div class="indicator-wrapper">
+        </div>
+        <div class="indicator-preset">
+            <button class="indicator-round indicator-previous"></button> <!-- previous (optional) -->
+            <button class="indicator-round indicator-around-selected indicator-around-merge"></button> <!-- previous (optional) -->
+            <button class="indicator-round indicator-selected"></button> <!-- selected -->
+            <button class="indicator-round indicator-next"></button> <!-- next -->
+        </div>
+    </section>
+    
+    <!--
+        Slider
+
+        Optional settings:
+            data-slider-image-src="./assets/slider-images/photo-{id}.svg"
+            data-slider-size="90% auto" ===============================> "<width> <height>"
+            data-slider-card-width="400px" 
+            data-slider-scroll-start="10 10" ==========================> "<all_scroll_adjust> <start_scroll_adjust>"
+            data-slider-endless="true" 
+            data-auto-card-disposition="true" 
+            data-slider-auto-flow="false 2000 10000" ===================> "<allowed> <delay> <return_delay_after_activity>"
+            data-refs-indicator="true" 
+            data-refs-slider="true"
+    -->
+    <section id="slider-something" class="slider-container" data-slider-image-src="./assets/slider-images/photo-{id}.svg" data-slider-endless="true">
+        <div class="slider">
+            <!-- Card 1 -->
+            <div class="card-wrapper">
+                <div class="card-image">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Card 1</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Repellendus natus ex eius eaque eveniet? Quasi nisi officiis 
+                        nobis quo aliquam nemo pariatur asperiores maiores? Cupiditate 
+                        molestiae minima vel odit quas?
+                    </p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card-wrapper">
+                <div class="card-image">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Card 2</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Repellendus natus ex eius eaque eveniet? Quasi nisi officiis 
+                        nobis quo aliquam nemo pariatur asperiores maiores? Cupiditate 
+                        molestiae minima vel odit quas?
+                    </p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card-wrapper">
+                <div class="card-image">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Card 3</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Repellendus natus ex eius eaque eveniet? Quasi nisi officiis 
+                        nobis quo aliquam nemo pariatur asperiores maiores? Cupiditate 
+                        molestiae minima vel odit quas?
+                    </p>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card-wrapper">
+                <div class="card-image">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Card 4</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Repellendus natus ex eius eaque eveniet? Quasi nisi officiis 
+                        nobis quo aliquam nemo pariatur asperiores maiores? Cupiditate 
+                        molestiae minima vel odit quas?
+                    </p>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card-wrapper">
+                <div class="card-image">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Card 5</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Repellendus natus ex eius eaque eveniet? Quasi nisi officiis 
+                        nobis quo aliquam nemo pariatur asperiores maiores? Cupiditate 
+                        molestiae minima vel odit quas?
+                    </p>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card-wrapper">
+                <div class="card-image">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Card 6</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Repellendus natus ex eius eaque eveniet? Quasi nisi officiis 
+                        nobis quo aliquam nemo pariatur asperiores maiores? Cupiditate 
+                        molestiae minima vel odit quas?
+                    </p>
+                </div>
+            </div>
+            <!-- More Cards ... 
+            <div class="card-wrapper">
+                <div class="card-image"></div>
+                <div class="card-content">
+                    <h3 class="card-title"></h3>
+                    <p class="card-description"></p>
+                </div>
+            </div>
+            -->
+        </div>
+        <!-- Buttons -->
+        <div class="slider-btn slider-btn-left"><button>&lt;</button></div>
+        <div class="slider-btn slider-btn-right"><button>&gt;</button></div>
+    </section>
+    
+    <!-- Index.js -->
+    <script src="./index.js"></script>
+</body>
+</html>
