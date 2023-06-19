@@ -10,7 +10,7 @@
 <p>Para o uso do código de maneira livre é necessário o utilizador informar os créditos do autor (Leonardo Delgado), caso tenha sido feita qualquer modificação no código informar junto aos créditos (ex.: <code>Slider.js by: Leonardo Delgado. The original code has modifications.</code>)</p>
 
 <h2>Prévia</h2>
-<b>Link: </b> <br>
+<b>Link: <a href="https://delgado-tech.github.io/slider-js/" target="_blank">https://delgado-tech.github.io/slider-js/</a></b> <br>
 <b>Previsualização:</b>
 <img src="https://github.com/Delgado-tech/slider-js/assets/60985347/1a75ee6d-d55a-43dd-a4c2-9281835894d5">
 
