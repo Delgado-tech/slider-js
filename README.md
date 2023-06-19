@@ -16,8 +16,9 @@
 <h2 id="sumario">Sumário</h2>
 <a href="#topico1"><strong>1. Funcionamento</strong></a> <br>
 <a href="#"><strong>2. Configuração do slider</strong></a> <br>
-<a href="#"><strong>2.1 Configuração do indicador (Opcional)</strong></a> <br>
-<a href="#"><strong>2.2 Configuração dos destaques (Opcional)</strong></a>
+<a href="#"><strong>2.1 Data-tags do slider</strong></a> <br>
+<a href="#"><strong>3 Configuração do indicador (Opcional)</strong></a> <br>
+<a href="#"><strong>4 Configuração dos destaques (Opcional)</strong></a>
 
 
 <h2 id="topico1">1. Funcionamento</h2>
@@ -29,10 +30,8 @@
 <p>Faça o download da pasta <code>0-slider-template</code> presente nesse repositório, dentro dessa pasta já terá os arquivo pre-moldados com algumas informações, se deseja realizar a inserção do zero, siga os passos a seguir:</p>
 
 <br>
-
 <p>Primeiro passo, dentro da pasta informada acima, copie os arquivos <code>slider.js</code> e <code>slider.css</code> e cole em seu projeto.</p>
 <p>Segundo passo, referencie esses arquivos em seu arquivo html que irá utiliza-los.</p>
-
 
 ```html
 <html>
@@ -46,8 +45,9 @@
 </body>
 </html>
 ```
+
 <br>
-<p>Terceiro passo, crie uma section com a classe <code>slider-container</code> (caso a sua página venha a possuir mais de um slider crie um id para identifica-lo) onde será configurado a maior parte do funcionamento do slider, dentro dela crie uma div com a classe <code>slider</code> e outras duas divs com a classe <code>slider-btn</code> (essas duas divs servirão como botões para navegar dentro no slider) e coloque em uma a classe <code>slider-btn-left</code> e em outra a classe <code>slider-btn-right</code> para posicionar os botões.</p>
+<p>Terceiro passo, crie uma section com a classe <code>slider-container</code> (caso a sua página venha a possuir mais de um slider crie um id para identifica-lo) onde será configurado a maior parte do funcionamento do slider (para configurar o slider utilize essas <a href="#t1-datatags">data-tags</a>), dentro dela crie uma div com a classe <code>slider</code> e outras duas divs com a classe <code>slider-btn</code> (essas duas divs servirão como botões para navegar dentro no slider) e coloque em uma a classe <code>slider-btn-left</code> e em outra a classe <code>slider-btn-right</code> para posicionar os botões.</p>
 
 ```html
 <section id="slider-something" class="slider-container">
@@ -59,10 +59,11 @@
 </section>
 ```
 
-<p>Quarto passo, crie os cards que irão passar em seu slider (não há limites no número de cards), para isso, dentro da div slider, crie uma div com a classe <code>card-wrapper</code> e dentro dessa div crie uma div com a classe <code>card-image</code> e outra div com a classe <code>card-content</code>, dentro de card-content crie um dois elementos um com a classe <code>card-title</code> e outro com a classe <code>card-description</code>.</p>
+<br>
+<p>Quarto passo, crie os cards que irão passar em seu slider (não há limites no número de cards), para isso, dentro da div slider, crie uma div com a classe <code>card-wrapper</code> e dentro dessa div crie uma div com a classe <code>card-image</code> e outra div com a classe <code>card-content</code>, dentro de card-content crie um dois elementos um com a classe <code>card-title</code> e outro com a classe <code>card-description</code>. Agora para adicionar mais card basta copiar e coloar a div card-wrappers quantas vezes desejar.</p>
 
 ```html
-<div class="slider">
+<!--<div class="slider">-->
     <div class="card-wrapper">
         <div class="card-image"></div>
         <div class="card-content">
@@ -70,7 +71,73 @@
             <p class="card-description">Descrição</p>
         </div>
     </div>
-</div> 
 ```
+
+<br>
+<p>Quinto passo, depois de concluirmos a nossa estrutura HTML, precisamos referencia-la em um arquivo JS que conectará o seu arquivo HTML com o arquivo slider.js, para isso vamos criar um outro arquivo chamado <code>index.js</code> e nele colocar o código a seguir.</p>
+
+```js
+// cria uma constante que receberá todos os sliders dentro do documento
+const sliderContainers = document.querySelectorAll(".slider-container");
+
+//para cada elemento HTML com a classe "slider-container" instância a classe slider que usa como parâmetro esse elemento.
+sliderContainers.forEach(sliderContainer => {
+    new slider(sliderContainer);
+});
+```
+
+<br>
+<p>Por fim, no final do documento HTML chame esse arquivo.</p>
+
+```html
+<!-- [...] -->
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
+```
+
+<br>
+<br>
+
+<h2 id="t1-datatags">2.1 Data-tags do slider</h2>
+<p>As data-tags permitem configurar o funcionamento do slider em questão, veja abaixo cada uma delas e o que fazem:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Data-tag</th>
+            <th>Exemplo</th>
+            <th>Descrição</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Linha 1 -->
+        <tr>
+            <td>data-slider-image-src</td>
+            <td><pre><span class="pl-c1">data-slider-image-src</span>="./assets/slider-images/photo-{id}.svg"</pre></td>
+            <td>Define o caminho onde serão encontradas as imagens de cada card</td>
+        </tr>
+        <!-- Linha 2 -->
+        <tr>
+            <td>data-slider-width</td>
+            <td>Define a largura do container do slider</td>
+        </tr>
+        <!-- Linha 3 -->
+        <tr>
+            <td>data-slider-height</td>
+            <td>Define a altura do container do slider</td>
+        </tr>
+         <!-- Linha 4 -->
+        <tr>
+            <td>data-slider-size</td>
+            <td>Define a largura e a altura do container do slider simultaneamente</td>
+        </tr>
+         <!-- Linha 5 -->
+        <tr>
+            <td>data-slider-size</td>
+            <td>Define a largura e a altura do container do slider simultaneamente</td>
+        </tr>
+    </tbody>
+</table>
 
 
