@@ -1,11 +1,13 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:ffc373,50:faebd7,100:ffcc8a&height=150&section=header" width="100%">
 
+<div align="center">
+    <img src="https://github.com/Delgado-tech/slider-js/assets/60985347/00bb4f18-d5ef-455d-80ec-61c740e79dca" width="50%">
+</div>
 
-<img src="https://github.com/Delgado-tech/slider-js/assets/60985347/cc408fdb-4b53-45ec-84c8-2de891d1d619" width="5%" align="left">
-<h1>Slider JS</h1>
+#
 
-<p>O repositório que se encontra tem como o objetivo de fornecer um código pronto elaborado pelo autor e insinar a utilização dele, o código pode ser alterado posteriormente para deixar o funcionamento ao gosto do leitor.</p>
-<p>Para o uso do código de maneira livre é necessário o utilizador informar os créditos do autor (Leonardo Delgado), caso tenha sido feita qualquer modificação no código informar junto aos créditos (ex.: <code>Slider.js by: Leonardo Delgado. The code has modifications by the user.</code>)</p>
+<p>O repositório em que você se encontra tem como o objetivo fornecer um código pronto e elaborado pelo autor, bem como ensinar a utilização do mesmo, o código pode ser alterado posteriormente para deixar o funcionamento ao gosto do usuário.</p>
+<p>Para o uso do código de maneira livre é necessário o utilizador informar os créditos do autor (Leonardo Delgado), caso tenha sido feita qualquer modificação no código informar junto aos créditos (ex.: <code>Slider.js by: Leonardo Delgado. The original code has modifications.</code>)</p>
 
 <h2>Prévia</h2>
 <b>Link: </b> <br>
@@ -17,9 +19,11 @@
 <br>
 <br>
 <br>
-<br>
 
-<h2 id="sumario">Sumário</h2>
+﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
+
+
+<h3 id="sumario">Sumário</h3>
 <blockquote>
     <a href="#topico1"><strong>1. Funcionamento</strong></a> <br>
     <a href="#topico2"><strong>2. Configuração do slider</strong></a> <br>
@@ -29,7 +33,9 @@
     <a href="#rodape"><strong>Rodapé</strong></a> <br>
 </blockquote>
 
-<br>
+﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏﹏
+
+
 <br>
 <br>
 <br>
@@ -67,7 +73,7 @@
 ```
 
 <br>
-<p>Terceiro passo, crie uma section com a classe <code>slider-container</code> (caso a sua página venha a possuir mais de um slider crie um id para identifica-lo) onde será configurado a maior parte do funcionamento do slider (para configurar o slider utilize essas <a href="#t2-datatags">data-tags</a>), dentro dela crie uma div com a classe <code>slider</code> e outras duas divs com a classe <code>slider-btn</code> (essas duas divs servirão como botões para navegar dentro no slider) e coloque em uma a classe <code>slider-btn-left</code> e em outra a classe <code>slider-btn-right</code> para posicionar os botões.</p>
+<p>Terceiro passo, crie uma seção com a classe <code>slider-container</code> (caso a sua página venha a possuir mais de um slider crie um id para identifica-lo), nessa seção será configurado a maior parte do funcionamento do slider (para configurar o slider <a href="#t2-datatags">clique aqui</a> para ver as data-tags), dentro dela crie uma div com a classe <code>slider</code> e outras duas divs com a classe <code>slider-btn</code> (essas duas divs servirão como botões para navegar dentro no slider) e coloque em uma a classe <code>slider-btn-left</code> e em outra a classe <code>slider-btn-right</code> para posicionar os botões na esquerda e direira respectivamente.</p>
 
 ```html
 <section id="slider-something" class="slider-container">
@@ -80,7 +86,7 @@
 ```
 
 <br>
-<p>Quarto passo, crie os cards que irão passar em seu slider (não há limites no número de cards), para isso, dentro da div slider, crie uma div com a classe <code>card-wrapper</code> e dentro dessa div crie uma div com a classe <code>card-image</code> e outra div com a classe <code>card-content</code>, dentro de card-content crie um dois elementos um com a classe <code>card-title</code> e outro com a classe <code>card-description</code>. Agora para adicionar mais card basta copiar e coloar a div card-wrappers quantas vezes desejar.</p>
+<p>Quarto passo, crie os cards que irão passar em seu slider (não há limites no número de cards), para isso, dentro da div slider, crie uma div com a classe <code>card-wrapper</code> e dentro dessa div crie uma div com a classe <code>card-image</code> e outra div com a classe <code>card-content</code>, dentro de card-content crie dois elementos, um com a classe <code>card-title</code> e outro com a classe <code>card-description</code>. Agora para adicionar mais cards basta copiar e colar a div card-wrappers quantas vezes desejar.</p>
 
 ```html
 <!--<div class="slider">-->
@@ -96,7 +102,7 @@
 
 <br>
 <blockquote> 
-    Você pode esconder informações do cartão colocando ao lado da classe card-wrapper as classes <code>hidden-image"</code> para imagens e <code>hidden-content</code> para o conteúdo.
+    Você pode esconder informações do cartão colocando ao lado da classe card-wrapper as classes <code>hidden-image"</code> para imagens ou <code>hidden-content</code> para o conteúdo.
 </blockquote>
 
 ```html
@@ -111,7 +117,7 @@
 
 <br>
 <blockquote> 
-    Você pode também mudar a orientação do itens, ao invés de ficar a imagem acima ou abaixo do texto, ela pode ficar ao lado do texto, para isso basta colocar ao lado da classe card-wrapper a classe <code>card-wrapper-grid-column</code> para o conteúdo.
+    Você pode também mudar a orientação do itens, ao invés de ficar a imagem acima ou abaixo do texto, ela pode ficar ao lado do texto, para isso basta colocar ao lado da classe card-wrapper a classe <code>card-wrapper-grid-column</code>.
 </blockquote>
 
 ```html
@@ -127,7 +133,7 @@
 // cria uma constante que receberá todos os sliders dentro do documento
 const sliderContainers = document.querySelectorAll(".slider-container");
 
-//para cada elemento HTML com a classe "slider-container" instância a classe slider que usa como parâmetro esse elemento.
+//para cada elemento HTML com a classe "slider-container" instancia a classe slider que usa como parâmetro esse elemento.
 sliderContainers.forEach(sliderContainer => {
     new slider(sliderContainer);
 });
@@ -162,7 +168,7 @@ sliderContainers.forEach(sliderContainer => {
         <tr>
             <td align="center"><pre>data-slider-image-src</pre></td>
             <td align="center"><code>data-slider-image-src="./assets/slider-images/photo-{id}.svg"</code></td>
-            <td align="center">Define o caminho onde serão encontradas as imagens de cada card (obs: as imagens devem estar no mesmo diretório, possuindo o mesmo nome seguido do número do card e onde conterá esse número escreva "{id}" na data-tag como no exemplo)</td>
+            <td align="center">Define o caminho onde serão encontradas as imagens de cada card (obs: as imagens devem estar no mesmo diretório, possuindo o mesmo nome seguido do número do card (onde conterá esse número escreva "{id}" na data-tag como no exemplo ao lado))</td>
         </tr>
         <!-- Linha 2 -->
         <tr>
@@ -253,7 +259,7 @@ sliderContainers.forEach(sliderContainer => {
 ```
 
 <br>
-<p>Por fim, referêncie os elementos dentro dos cartão em destaque criando uma div com a classe <code>slider-image-ref</code> para a imagem e a classe <code>slider-content-ref</code> para os demais itens textuais, para definir a referência coloque em ambos items a data-tag <code>data-slider-item-ref</code> e dentro dela a classe ou a div referênciada (utilizar "#" para id e "." para classe).</p>
+<p>Por fim, referêncie os elementos dentro do cartão em destaque criando uma div com a classe <code>slider-image-ref</code> para a imagem e a classe <code>slider-content-ref</code> para os demais itens textuais, para definir a referência coloque em ambos itens a data-tag <code>data-slider-item-ref</code> e dentro dela a classe ou a div referenciada (utilizar "#" para id e "." para classe).</p>
 
 ```html
 <section class="slider-ref" data-slider-ref="slider-exemplo">
@@ -297,7 +303,7 @@ sliderContainers.forEach(sliderContainer => {
 ```
 
 <br>
-<p>Por fim, dentro da classe indicator-preset crie quatro elementos do tipo button e atribua as classes <code>indicator-previous, indicator-around-selected, indicator-selected e indicator-next</code> uma para cada button. Caso queira definir uma estilização para seu indicator, você pode criar uma classe a parte e estiliza-la ao seu gosto ou utilizar uma já pronta no arquivo slider.css como <code>indicator-round, indicator-box ou indicator-rect</code>.</p>
+<p>Por fim, dentro da classe indicator-preset crie quatro elementos do tipo button e atribua as classes <code>indicator-previous, indicator-around-selected, indicator-selected e indicator-next</code> uma para cada button. Caso queira definir uma estilização para seu indicator ref, você pode criar uma classe a parte e estiliza-la ao seu gosto ou utilizar uma já pronta no arquivo slider.css como <code>indicator-round, indicator-box ou indicator-rect</code>.</p>
 
 ```html
 <section class="slider-indicator" data-slider-ref="slider-exemplo">
@@ -320,5 +326,7 @@ sliderContainers.forEach(sliderContainer => {
 <br>
 <br>
 
-<h3>Muito obrigado por sua atenção!</h3>
+<h3 id="rodape" align="center">Obrigado!</h3>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:30363d&height=150&section=footer" width="100%">
 
