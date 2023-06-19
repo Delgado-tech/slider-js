@@ -22,7 +22,9 @@
 
 
 <h2 id="topico1">1. Funcionamento</h2>
-<blockquote>Um slider é um elemento de interface com o usuário comumente usado em aplicativos e sites para permitir que os usuários selecionem um valor em um intervalo específico. Ele normalmente consiste em uma barra horizontal com um indicador que pode ser arrastado para a esquerda ou direita.</blockquote>
+<blockquote>
+    Um slider é um elemento de interface com o usuário comumente usado em aplicativos e sites para permitir que os usuários selecionem um valor em um intervalo específico. Ele normalmente consiste em uma barra horizontal com um indicador que pode ser arrastado para a       esquerda ou direita.
+</blockquote>
 
 <p>O funcionamento é simples, basta copiar a estrutura html informada nesse artigo, e utilizar data-tags para customizar seu slider e alterar classes especificas do css para uma edição visual.</p>
 
@@ -75,7 +77,9 @@
 ```
 
 <br>
-<blockquote> Você pode esconder informações do cartão colocando ao lado da classe card-wrapper as classes <code>hidden-image"</code> para imagens e <code>hidden-content</code> para o conteúdo</blockquote>
+<blockquote> 
+    Você pode esconder informações do cartão colocando ao lado da classe card-wrapper as classes <code>hidden-image"</code> para imagens e <code>hidden-content</code> para o conteúdo.
+</blockquote>
 
 ```html
     <div class="card-wrapper hidden-image">
@@ -88,7 +92,9 @@
 ```
 
 <br>
-<blockquote> Você pode também mudar a orientação do itens, ao invés de ficar a imagem acima ou abaixo do texto, ela pode ficar ao lado do texto, para isso basta colocar ao lado da classe card-wrapper a classe <code>card-wrapper-grid-column</code> para o conteúdo</blockquote>
+<blockquote> 
+    Você pode também mudar a orientação do itens, ao invés de ficar a imagem acima ou abaixo do texto, ela pode ficar ao lado do texto, para isso basta colocar ao lado da classe card-wrapper a classe <code>card-wrapper-grid-column</code> para o conteúdo.
+</blockquote>
 
 ```html
     <div class="card-wrapper card-wrapper-grid-column">
@@ -184,9 +190,21 @@ sliderContainers.forEach(sliderContainer => {
         </tr>
         <!-- Linha 9 -->
         <tr>
-            <td align="center"><pre></pre></td>
-            <td align="center"><code></code></td>
-            <td align="center"></td>
+            <td align="center"><pre>data-slider-auto-flow</pre></td>
+            <td align="center"><code>data-slider-auto-flow="true 2000 10000"</code></td>
+            <td align="center">Ativa ou desativa o scroll automático dos cards, onde o segundo valor representa o intervalo entre um scroll e outro, e o terceiro valor representa um intervalo de repouso ao detectar qualquer interatividade do usuário com o slider (ambos valores são em milissegundos)</td>
+        </tr>
+        <!-- Linha 10 -->
+        <tr>
+            <td align="center"><pre>data-refs-indicator</pre></td>
+            <td align="center"><code>data-refs-indicator="true"</code></td>
+            <td align="center">Ativa ou desativa o indicador do slider atual</td>
+        </tr>
+        <!-- Linha 11 -->
+        <tr>
+            <td align="center"><pre>data-refs-slider</pre></td>
+            <td align="center"><code>data-refs-slider="true"</code></td>
+            <td align="center">Ativa ou desativa os paineis de foco do cartão atual</td>
         </tr>
     </tbody>
 </table>
