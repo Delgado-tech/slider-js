@@ -1,3 +1,7 @@
+/*
+Slider.js by Leonardo Delgado
+*/
+
 class slider {
     hasFocus = false;
 
