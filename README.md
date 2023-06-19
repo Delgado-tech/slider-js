@@ -35,28 +35,42 @@
 
 
 ```html
-  <html>
-  <head>
-      <!-- Imports -->
-      <link rel="stylesheet" href="./slider.css">
-      <script src="./slider.js"></script>
-      <!------------->
-  </head>
-  <body>
-  </body>
-  </html>
+<html>
+<head>
+    <!-- Imports -->
+    <link rel="stylesheet" href="./slider.css">
+    <script src="./slider.js"></script>
+    <!------------->
+</head>
+<body>
+</body>
+</html>
 ```
 <br>
 <p>Terceiro passo, crie uma section com a classe <code>slider-container</code> (caso a sua página venha a possuir mais de um slider crie um id para identifica-lo) onde será configurado a maior parte do funcionamento do slider, dentro dela crie uma div com a classe <code>slider</code> e outras duas divs com a classe <code>slider-btn</code> (essas duas divs servirão como botões para navegar dentro no slider) e coloque em uma a classe <code>slider-btn-left</code> e em outra a classe <code>slider-btn-right</code> para posicionar os botões.</p>
 
 ```html
-    <section id="slider-something" class="slider-container">
-        <div class="slider">
+<section id="slider-something" class="slider-container">
+    <div class="slider">
+    </div>
+    <!-- Buttons -->
+    <div class="slider-btn slider-btn-left"><button>&lt;</button></div> <!-- &lt; é o código do simbolo menor que ("<") -->
+    <div class="slider-btn slider-btn-right"><button>&gt;</button></div> <!-- &lt; é o código do simbolo maior que (">") -->
+</section>
+```
+
+<p>Quarto passo, crie os cards que irão passar em seu slider (não há limites no número de cards), para isso, dentro da div slider, crie uma div com a classe <code>card-wrapper</code> e dentro dessa div crie uma div com a classe <code>card-image</code> e outra div com a classe <code>card-content</code>, dentro de card-content crie um dois elementos um com a classe <code>card-title</code> e outro com a classe <code>card-description</code>.</p>
+
+```html
+<div class="slider">
+    <div class="card-wrapper">
+        <div class="card-image"></div>
+        <div class="card-content">
+            <h3 class="card-title">titulo</h3>
+            <p class="card-description">Descrição</p>
         </div>
-        <!-- Buttons -->
-        <div class="slider-btn slider-btn-left"><button>&lt;</button></div> <!-- &lt; é o código do simbolo menor que ("<") -->
-        <div class="slider-btn slider-btn-right"><button>&gt;</button></div> <!-- &lt; é o código do simbolo maior que (">") -->
-    </section>
+    </div>
+</div> 
 ```
 
 
