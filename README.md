@@ -7,7 +7,7 @@
 <p>O repositório que se encontra tem como o objetivo de fornecer um código pronto elaborado pelo autor e insinar a utilização dele, o código pode ser alterado posteriormente para deixar o funcionamento ao gosto do leitor.</p>
 <p>Para o uso do código de maneira livre é necessário o utilizador informar os créditos do autor (Leonardo Delgado), caso tenha sido feita qualquer modificação no código informar junto aos créditos (ex.: <code>Slider.js by: Leonardo Delgado. The code has modifications by the user.</code>)</p>
 
-<h2>Menu degustação</h2>
+<h2>Prévia</h2>
 <b>Link: </b> <br>
 <b>Previsualização:</b>
 <img src="https://github.com/Delgado-tech/slider-js/assets/60985347/1a75ee6d-d55a-43dd-a4c2-9281835894d5">
@@ -20,11 +20,14 @@
 <br>
 
 <h2 id="sumario">Sumário</h2>
-<a href="#topico1"><strong>1. Funcionamento</strong></a> <br>
-<a href="#topico2"><strong>2. Configuração do slider</strong></a> <br>
-<a href="#t2-datatags"><strong>2.1 Data-tags do slider</strong></a> <br>
-<a href="#topico3"><strong>3. Configuração dos slider refs (Opcional)</strong></a> <br>
-<a href="#topico4"><strong>4. Configuração do indicator ref (Opcional)</strong></a> <br>
+<blockquote>
+    <a href="#topico1"><strong>1. Funcionamento</strong></a> <br>
+    <a href="#topico2"><strong>2. Configuração do slider</strong></a> <br>
+    <a href="#t2-datatags"><strong>2.1 Data-tags do slider</strong></a> <br>
+    <a href="#topico3"><strong>3. Configuração dos slider refs (Opcional)</strong></a> <br>
+    <a href="#topico4"><strong>4. Configuração do indicator ref (Opcional)</strong></a> <br>
+    <a href="#rodape"><strong>Rodapé</strong></a> <br>
+</blockquote>
 
 <br>
 <br>
@@ -269,6 +272,7 @@ sliderContainers.forEach(sliderContainer => {
 <p>O indicator ref (veja a <a href="#t2-datatags-refimg">imagem de referência</a>) é uma div a parte onde será mostrado a posição do cartão atual em relação ao primeiro cartão (obs: só é possível criar um indicator ref por slider; obs2: o indicator ref funciona apenas com o modo <a href="#t2-datatags-endless">carrossel ativo</a>), para a criação de um indicator ref, siga os passos a seguir:</p>
 
 <p>Primeiro passo, caso não haja, defina um id para o container do seu slider.</p>
+
 ```html
 <section id="slider-exemplo" class="slider-container">
 <!-- [...] -->
@@ -293,7 +297,7 @@ sliderContainers.forEach(sliderContainer => {
 ```
 
 <br>
-<p>Por fim, dentro da classe indicator-preset crie quatro elementos do tipo button e atribua as classes <code>indicator-previous, indicator-around-selected, indicator-selected e indicator-next</code> uma para cada button. Caso queira definir uma estilização para seu indicator, você pode criar uma classe a parte e estiliza-la ao seu gosto ou utilizar uma já pronta no arquivo slider.css como <code>indicator-round, indicator-box ou indicator-rect</code></p>
+<p>Por fim, dentro da classe indicator-preset crie quatro elementos do tipo button e atribua as classes <code>indicator-previous, indicator-around-selected, indicator-selected e indicator-next</code> uma para cada button. Caso queira definir uma estilização para seu indicator, você pode criar uma classe a parte e estiliza-la ao seu gosto ou utilizar uma já pronta no arquivo slider.css como <code>indicator-round, indicator-box ou indicator-rect</code>.</p>
 
 ```html
 <section class="slider-indicator" data-slider-ref="slider-exemplo">
@@ -306,4 +310,15 @@ sliderContainers.forEach(sliderContainer => {
         <button class="indicator-round indicator-next"></button> <!-- next -->
     </div>
 </section>
-``` 
+```
+
+<h3>Imagem de referência:</h3>
+<img src="https://github.com/Delgado-tech/slider-js/assets/60985347/984b171d-38c0-4142-8edd-10e635742f51">
+
+<br>
+<br>
+<br>
+<br>
+
+<h3>Muito obrigado por sua atenção!</h3>
+
