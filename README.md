@@ -12,14 +12,20 @@
 <b>Previsualização:</b>
 <img src="https://github.com/Delgado-tech/slider-js/assets/60985347/1a75ee6d-d55a-43dd-a4c2-9281835894d5">
 
+#
+
+<br><br><br><br>
 
 <h2 id="sumario">Sumário</h2>
 <a href="#topico1"><strong>1. Funcionamento</strong></a> <br>
-<a href="#"><strong>2. Configuração do slider</strong></a> <br>
-<a href="#"><strong>2.1 Data-tags do slider</strong></a> <br>
-<a href="#"><strong>3 Configuração do indicador (Opcional)</strong></a> <br>
-<a href="#"><strong>4 Configuração dos destaques (Opcional)</strong></a>
+<a href="#topico2"><strong>2. Configuração do slider</strong></a> <br>
+<a href="#t2-datatags"><strong>2.1 Data-tags do slider</strong></a> <br>
+<a href="#topico3"><strong>3. Configuração dos slider refs (Opcional)</strong></a>
+<a href="#"><strong>4. Configuração do indicador ref (Opcional)</strong></a> <br>
 
+<br><br><br><br>
+
+#
 
 <h2 id="topico1">1. Funcionamento</h2>
 <blockquote>
@@ -27,6 +33,8 @@
 </blockquote>
 
 <p>O funcionamento é simples, basta copiar a estrutura html informada nesse artigo, e utilizar data-tags para customizar seu slider e alterar classes especificas do css para uma edição visual.</p>
+
+<br><br>
 
 <h2 id="topico2">2. Configuração do slider</h2>
 <p>Faça o download da pasta <code>0-slider-template</code> presente nesse repositório, dentro dessa pasta já terá os arquivo pre-moldados com algumas informações, se deseja realizar a inserção do zero, siga os passos a seguir:</p>
@@ -128,7 +136,7 @@ sliderContainers.forEach(sliderContainer => {
 <br>
 <br>
 
-<h2 id="t1-datatags">2.1 Data-tags do slider</h2>
+<h2 id="t2-datatags">2.1 Data-tags do slider</h2>
 <p>As data-tags permitem configurar o funcionamento do slider em questão, veja abaixo cada uma delas e o que fazem:</p>
 
 <table>
@@ -177,7 +185,7 @@ sliderContainers.forEach(sliderContainer => {
             <td align="center">Define um scroll inicial para o slider, o primeiro valor irá afetar todo o scroll, já o segundo só irá afetar o scroll ao a página ser carregada</td>
         </tr>
         <!-- Linha 7 -->
-        <tr>
+        <tr id="t2-datatags-endless">
             <td align="center"><pre>data-slider-endless</pre></td>
             <td align="center"><code>data-slider-endless="true"</code></td>
             <td align="center">Ativa ou desativa o modo carrossel (obs: algumas funcionalidades não funcionam sem esse modo ativo)</td>
@@ -198,20 +206,23 @@ sliderContainers.forEach(sliderContainer => {
         <tr>
             <td align="center"><pre>data-refs-indicator</pre></td>
             <td align="center"><code>data-refs-indicator="true"</code></td>
-            <td align="center">Ativa ou desativa o indicator ref (veja a imagem de referência)</td>
+            <td align="center">Ativa ou desativa o indicator ref (veja a <a href="#t2-datatags-refimg">imagem de referência</a>)</td>
         </tr>
         <!-- Linha 11 -->
         <tr>
             <td align="center"><pre>data-refs-slider</pre></td>
             <td align="center"><code>data-refs-slider="true"</code></td>
-            <td align="center">Ativa ou desativa os slider refs (veja a imagem de referência)</td>
+            <td align="center">Ativa ou desativa os slider refs (veja a <a href="#t2-datatags-refimg">imagem de referência</a>)</td>
         </tr>
     </tbody>
 </table>
 
 <br>
-<h3>Imagem de referência:</h3>
+<h3 id="t2-datatags-refimg">Imagem de referência:</h3>
 <img src="https://github.com/Delgado-tech/slider-js/assets/60985347/909381c6-3c07-4d20-a552-07559e921432">
 
+<br><br>
 
+<h2 id="topico3">3. Configuração dos slider refs (Opcional)</h2>
+<p>O slider ref (veja a <a href="#t2-datatags-refimg">imagem de referência</a>) é uma div a parte onde pode mostrar os valores do cartão que está em destaque do slider (obs: não há limite nos sliders refs que você pode criar, mas recomenda-se criar apenas um por slider; obs2: os slider refs funcionam apenas com o modo <a href="#t2-datatags-endless">carrossel ativo</a>)</p>
 
