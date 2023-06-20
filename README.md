@@ -10,7 +10,7 @@
 <p>Para o uso do código de maneira livre é necessário o utilizador informar os créditos do autor (Leonardo Delgado), caso tenha sido feita qualquer modificação no código informar junto aos créditos (ex.: <code>Slider.js by: Leonardo Delgado. The original code has modifications.</code>)</p>
 
 <h2>Prévia</h2>
-<b>Link: </b> <br>
+<b>Link: <a href="https://delgado-tech.github.io/slider-js/" target="_blank">https://delgado-tech.github.io/slider-js/</a></b> <br>
 <b>Previsualização:</b>
 <img src="https://github.com/Delgado-tech/slider-js/assets/60985347/1a75ee6d-d55a-43dd-a4c2-9281835894d5">
 
@@ -76,7 +76,7 @@
 <p>Terceiro passo, crie uma seção com a classe <code>slider-container</code> (caso a sua página venha a possuir mais de um slider crie um id para identifica-lo), nessa seção será configurado a maior parte do funcionamento do slider (para configurar o slider <a href="#t2-datatags">clique aqui</a> para ver as data-tags), dentro dela crie uma div com a classe <code>slider</code> e outras duas divs com a classe <code>slider-btn</code> (essas duas divs servirão como botões para navegar dentro no slider) e coloque em uma a classe <code>slider-btn-left</code> e em outra a classe <code>slider-btn-right</code> para posicionar os botões na esquerda e direira respectivamente.</p>
 
 ```html
-<section id="slider-something" class="slider-container">
+<section id="slider-exemplo" class="slider-container">
     <div class="slider">
     </div>
     <!-- Buttons -->
@@ -232,6 +232,14 @@ sliderContainers.forEach(sliderContainer => {
         </tr>
     </tbody>
 </table>
+
+<br>
+<h3>Exemplo de configuração:</h3>
+
+```html
+<section id="slider-exemplo" class="slider-container" data-slider-scroll-start="10" data-slider-image-src="./assets/slider-images/photo-{id}.svg" data-slider-endless="true" data-slider-size="90% auto" data-slider-card-width="400px" data-auto-card-disposition="true" data-slider-auto-flow="false 2000 10000" data-refs-indicator="true" data-refs-slider="true">
+    <!-- [...] -->
+```
 
 <br>
 <h3 id="t2-datatags-refimg">Imagem de referência:</h3>
