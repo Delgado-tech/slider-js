@@ -3,22 +3,23 @@ Slider.js by Leonardo Delgado
 */
 
 class slider {
-    hasFocus = false;
-
-    mouseStartPos = undefined;
-    scrollLastPos = this.scrollStartPos;
-
-    indicatorRefAutoScrollInterval = undefined;
-
-    sliderAutoFlowInterval = undefined;
-    sliderAutoFlowTimemOut = undefined;
-    sliderAutoFlowCalledBtnClick = false;
-
-    startCardsOrder = undefined;
-
     constructor(sliderContainer) {
         this.container = sliderContainer;
         this.scrollStartPos = this.getScrollStartAdjust();
+        this.scrollLastPos = this.scrollStartPos;
+
+        // ====> General start up
+        this.hasFocus = false;
+
+        this.mouseStartPos = undefined;
+    
+        this.indicatorRefAutoScrollInterval = undefined;
+    
+        this.sliderAutoFlowInterval = undefined;
+        this.sliderAutoFlowTimemOut = undefined;
+        this.sliderAutoFlowCalledBtnClick = false;
+    
+        this.startCardsOrder = undefined;
 
         // ====> Cards config
         this.setCardWitdh();
@@ -148,13 +149,13 @@ class slider {
     // ====> Slider Auto Flow getters
 
     getSliderAutoFlowInactivityDelay() {
-        const delay = this.container.getAttribute("data-slider-auto-flow").split(" ")[2];
-        return delay ? parseInt(delay) : 0;
+        const delay = this.container.getAttribute("data-slider-auto-flow");
+        return delay ? parseInt(delay.split(" ")[2]) : 0;
     }
 
     getSliderAutoFlowDelay() {
-        const delay = this.container.getAttribute("data-slider-auto-flow").split(" ")[1];
-        return delay ? parseInt(delay) : 5000;
+        const delay = this.container.getAttribute("data-slider-auto-flow");
+        return delay ? parseInt(delay.split(" ")[1]) : 5000;
     }
 
     // ====> Inficator Ref getters
@@ -280,6 +281,7 @@ class slider {
 
         const indicatorPreset = this.getIndicatorPresetRef();
         const indicatorWrapper = this.indicatorRef.querySelector(".indicator-wrapper");
+        const fragment = document.createDocumentFragment();
         const cards = this.getCards();
 
         indicatorWrapper.querySelectorAll("button").forEach(e => e.remove());
@@ -298,8 +300,11 @@ class slider {
             }
 
             clone.setAttribute("data-card-index-ref", i);
-            indicatorWrapper.appendChild(clone);
+            fragment.append(clone);
         }
+        indicatorWrapper.appendChild(fragment);
+
+
         this.setIndicatorRefButtonsEvent();
     }
 
